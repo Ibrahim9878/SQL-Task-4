@@ -40,7 +40,7 @@ WHERE S.DateOut > '1/1/2001' AND S.DateOut <= SYSDATETIME()
 
 SELECT St.FirstName,St.LastName
 FROM S_Cards AS S JOIN Books AS B ON B.Id = S.Id_Book JOIN Students AS St ON S.Id_Student = St.Id JOIN Authors AS A ON A.Id = B.Id_Author
-WHERE (A.FirstName = 'Olga' AND A.LastName = 'Kokoreva') OR B.[Name] = 'Windows 2000 Registry'
+WHERE (A.FirstName = 'Olga' AND A.LastName = 'Kokoreva') AND B.[Name] = 'Windows 2000 Registry'
 
 
 --6. Display information about authors whose average volume of books (in pages) is more than 600 pages.
